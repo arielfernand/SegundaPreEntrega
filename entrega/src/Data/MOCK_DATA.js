@@ -8,6 +8,7 @@ export const MOCK_DATA = [
         precio: 1500, 
         img: '/public/fideos-1.jpg',
         category: "fideos",
+        stock: 20,
     },
     {
         id: 2, nombre: 'Mostachol Liso',
@@ -16,6 +17,7 @@ export const MOCK_DATA = [
         precio: 1800, 
         img: '/public/fideos-2.jpg',
         category: "fideos",
+        stock: 20,
     },
     {
         id: 3, nombre: 'Fideos Rigatti',
@@ -24,6 +26,7 @@ export const MOCK_DATA = [
         precio: 1000, 
         img: '/public/fideos-3.jpg',
         category: "fideos",
+        stock: 40,
     },
     {
         id: 4, nombre: 'Tallarines',
@@ -32,6 +35,7 @@ export const MOCK_DATA = [
         precio: 1200, 
         img: '/public/fideos-4.jpg',
         category: "fideos",
+        stock: 50,
     },
     {
         id: 5, nombre: 'Coditos',
@@ -40,6 +44,7 @@ export const MOCK_DATA = [
         precio: 1400, 
         img: '/public/fideos-5.jpg',
         category: "fideos",
+        stock: 20,
     },
     {
         id: 6, nombre: 'Porotos alubia',
@@ -48,6 +53,7 @@ export const MOCK_DATA = [
         precio: 2000, 
         img: '/public/legumbres1.jpg',
         category: "legumbres",
+        stock: 120,
     },
     {
         id: 7, nombre: 'Lentejas',
@@ -56,6 +62,7 @@ export const MOCK_DATA = [
         precio: 2300, 
         img: '/public/legumbres2.jpg',
         category: "legumbres",
+        stock: 50,
     },
     {
         id: 8, nombre: 'Garbanzos',
@@ -64,6 +71,7 @@ export const MOCK_DATA = [
         precio: 1500, 
         img: '/public/legumbres3.jpg',
         category: "legumbres",
+        stock: 20,
     },
     {
         id: 9, nombre: 'Arbejas',
@@ -72,6 +80,7 @@ export const MOCK_DATA = [
         precio: 1500, 
         img: '/public/legumbres4.jpg',
         category: "legumbres",
+        stock: 60,
     },
     {
         id: 10, nombre: 'Arroz Largo Fino',
@@ -80,6 +89,7 @@ export const MOCK_DATA = [
         precio: 1800, 
         img: '/public/arroz-1.jpg',
         category: "arroz",
+        stock: 20,
     },
     {
         id: 11, nombre: 'Arroz Doble',
@@ -88,6 +98,7 @@ export const MOCK_DATA = [
         precio: 2500, 
         img: '/public/arroz-2.jpg',
         category: "arroz",
+        stock: 40,
     },
     {
         id: 12, nombre: 'Aceite Girasol',
@@ -96,6 +107,7 @@ export const MOCK_DATA = [
         precio: 5500, 
         img: '/public/Aceite1.jpg',
         category: "aceite",
+        stock: 20,
     },
     {
         id: 13, nombre: 'Aceite Girasol',
@@ -104,6 +116,7 @@ export const MOCK_DATA = [
         precio: 4500, 
         img: '/public/Aceite2.jpg',
         category: "aceite",
+        stock: 20,
     },
     {
         id: 14, nombre: 'Aceite Girasol',
@@ -112,5 +125,6 @@ export const MOCK_DATA = [
         precio: 3500, 
         img: '/public/Aceite3.jpg',
         category: "aceite",
+        stock: 20,
     },
 ]

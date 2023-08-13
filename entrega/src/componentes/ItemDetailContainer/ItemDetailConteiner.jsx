@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { pedirDatos } from "../../Helpers/pedirDatos"
 import ItemDetail from "../ItemDetail/ItemDetail"
+import Loader from "../Loader/Loader"
+import { doc, getDoc } from "firebase/firestore"
+import {db} from '../../firebase/config'
 
 
 const ItemDetailConteiner = () => {
@@ -9,16 +12,31 @@ const ItemDetailConteiner = () => {
     const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
-    console.log(itemId)
+    // console.log(itemId)
 
     useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
-            .then(r => {
-                setItem(r.find(prod => prod.id === Number(itemId)))
+        //armar referencia
+        const itemRef = doc (db, "productos", itemId)
+
+        ///llamar ref
+        getDoc (itemRef)
+            .then ((doc)=>{
+                setItem({
+                    id:doc.id,
+                    ...doc.data()
+                })
             })
-            .finally(() => setLoading(false))
+            .catch (e=> console.log (e))
+            .finally (()=> setLoading(false))
+
+        /// aca queda el codigo viejo
+        // pedirDatos()
+        //     .then(r => {
+        //         setItem(r.find(prod => prod.id === Number(itemId)))
+        //     })
+        //     .finally(() => setLoading(false))
 
     }, [])
 
@@ -26,7 +44,7 @@ const ItemDetailConteiner = () => {
         <div className="container my-5">
             {
                 loading
-                    ? <h2>Cargando...</h2>
+                    ? <Loader/>
                     : <ItemDetail item={item} />
             }
 
